@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
   def posts
-  	@post = Post.all
+  	@posts = Post.all
 	end
 
   def posts_category

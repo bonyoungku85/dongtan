@@ -1,4 +1,12 @@
 Dongtan::Application.routes.draw do
+  get "properties/posts" => 'properties#posts'
+  get "properties/posts_category"
+  get "properties/show"
+  get "properties/write"
+  get "properties/write_complete"
+  get "properties/edit"
+  get "properties/edit_complete"
+  get "properties/delete_complete"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

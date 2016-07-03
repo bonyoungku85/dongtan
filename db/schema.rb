@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160703101203) do
+ActiveRecord::Schema.define(version: 20160703103506) do
 
-  create_table "properties", force: true do |t|
+  create_table "posts", force: true do |t|
     t.integer  "user_id"
     t.string   "category"
     t.string   "title"
