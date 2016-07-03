@@ -4,6 +4,17 @@ class PropertiesController < ApplicationController
 	end
 
   def posts_category
+		case params[:category]
+    when "deal"
+      @category = "매매"
+    when "rent"
+      @category = "월세"
+    when "lease"
+      @category = "전세"
+    else
+      @category = "기타"
+    end
+    @posts = Post.where(category: @category)
   end
 
   def show

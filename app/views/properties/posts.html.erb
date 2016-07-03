@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-	<title>Daum 지도 시작하기</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-</head>
 <body>
-	<h4><a href="#">동탄제2신도시 지도</a> || <a href="#">매매</a> | <a href="#">월세</a> | <a href="#">전세</a>
 
-<div>
-  <h2>동탄제2신도시 지도 사이트에 오신 여러분들을 환영합니다.</h2>
-  <p>정확한 정보를 제공하도록 노력하겠습니다.</p>
-</div>
-
-	<div id="map" style="width:1000px;height:800px;"></div>
-	<!-- services와 clusterer 라이브러리 불러오기 -->
-	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=400c01c5271daf5889c6dc40475e040f&libraries=services,clusterer"></script>
+<div class="row">
+	<div class="col-md-8" id="map" style="height:800px;"></div>
 	<script>
 		var container = document.getElementById('map');
 		var options = {
 			center: new daum.maps.LatLng(37.190825, 127.11203019999994),
-			level: 6
+		level: 6
 		};
 		//지도를 생성한다.
 		var map = new daum.maps.Map(container, options);
@@ -79,16 +65,16 @@
 	</script>
 
 <hr>
-
-<% @posts.each do |post| %>
-<div style="border: 1px solid #ffffff
-  <h4><%= post.title %></h4>
-  <p style="color: #ff0000"><%= post.category %></p>
-  <p>작성자 아이디</p>
-  <p><%= post.content %></p>
+<div class="col-md-4">
+		<% @posts.each do |post| %>
+			<div style="border: 1px solid #ffffff>
+  			<h4><%= post.title %></h4>
+  			<p style="color: #ff0000"><%= post.category %></p>
+  			<p>작성자 아이디</p>
+  			<p><%= post.content %></p>
+			</div>
+		<% end %>
 </div>
-
-<% end %>
+</div>
 </body>
-</html>
 

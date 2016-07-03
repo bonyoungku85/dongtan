@@ -1,6 +1,6 @@
 Dongtan::Application.routes.draw do
   get "properties/posts" => 'properties#posts'
-  get "properties/posts_category"
+  get "properties/:category" => 'properties#posts_category'
   get "properties/show"
   get "properties/write"
   get "properties/write_complete"

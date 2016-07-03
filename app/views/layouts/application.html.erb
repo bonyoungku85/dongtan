@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html
 <head>
   <title>Dongtan</title>
+	<meta charset="utf-8"/>
+	<title>Daum 지도 시작하기</title>
+	<link rel="stylesheet" type="text/css" href="/assets/bootstrap.css">
+	<!-- services와 clusterer 라이브러리 불러오기 -->
+	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=400c01c5271daf5889c6dc40475e040f&libraries=services,clusterer"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+	<h4><a href="/properties/posts">동탄제2신도시 지도</a> || <a href="deal">매매</a> | <a href="rent">월세</a> | <a href="lease">전세</a>
+
+<div>
+  <h2>동탄제2신도시 지도 사이트에 오신 여러분들을 환영합니다.</h2>
+  <p>정확한 정보를 제공하도록 노력하겠습니다.</p>
+</div>
 
 <%= yield %>
 
